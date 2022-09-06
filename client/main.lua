@@ -9,17 +9,18 @@ local trafficLights = {
 }
 
 CreateThread(function()
-	exports['qb-target']:AddTargetModel(trafficLights, {
-		options = {
-			{
-				event = "pl-traffichack:startHack",
-				icon = "fa-brands fa-usb",
-				label = "Hack",
-				item = 'phone',	--Replace with your own item
-			},
+	exports.qtarget:AddTargetModel(trafficLights, {
+	options = {
+		{
+			event = "pl-traffichack:startHack",
+			icon = "fa-brands fa-usb",
+			label = "Hack",
+			num = 1,
+			item = "phone"
 		},
-		distance = 1.2,
-	})
+	},
+	distance = 1.2
+})
 end)
 
 function getLight()
